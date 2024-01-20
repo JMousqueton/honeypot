@@ -182,7 +182,7 @@ services:
 # Nginx service
   nginx:
     build: nginx/.
-    image: "dtagdevsec/nginx:2204"
+    image: "jmousqueton/nginx:latest"
 
 # Spiderfoot service
   spiderfoot:
@@ -192,4 +192,4 @@ services:
 # Map Web Service
   map_web:
     build: elk/map/.
-    image: "dtagdevsec/map:2204"
+    image: "jmousqueton/map:latest"
