@@ -586,7 +586,7 @@ services:
     tty: true
     ports:
      - "127.0.0.1:64299:64299"
-    image: "jmousqueton/map:2204"
+    image: "jmousqueton/map:latest"
 
 ## Map Data Service
   map_data:
@@ -601,7 +601,7 @@ services:
      - /opt/tpot/etc/compose/elk_environment
     stop_signal: SIGKILL
     tty: true
-    image: "jmousqueton/map:2204"
+    image: "jmousqueton/map:latest"
 #### /ELK
 
 # Ewsposter service
