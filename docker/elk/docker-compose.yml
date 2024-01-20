@@ -96,6 +96,6 @@ services:
      - /opt/tpot/etc/compose/elk_environment
     stop_signal: SIGKILL
     tty: true
-    image: "jmousqueton/map:2204"
+    image: "jmousqueton/map:latest"
     depends_on:
      - map_redis
