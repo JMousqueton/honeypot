@@ -16,10 +16,10 @@ const CONFIG = {
   twelveHourFormat: false,
 
   // Greetings
-  greetingMorning: 'Good morning ☕',
-  greetingAfternoon: 'Good afternoon 🍯',
-  greetingEvening: 'Good evening 😁',
-  greetingNight: 'Go to Sleep 🥱',
+  greetingMorning: 'Bonour ☕',
+  greetingAfternoon: 'Bon après-midi 🍯',
+  greetingEvening: 'Bonne soirée 😁',
+  greetingNight: 'Bonne nuit 🥱',
 
   // ┬  ┬┌─┐┌┬┐┌─┐
   // │  │└─┐ │ └─┐
@@ -28,43 +28,34 @@ const CONFIG = {
   //Icons
   firstListIcon: 'home',
   secondListIcon: 'external-link',
+  // Previous version 
+  // firstListIcon: 'gauge',
+  // secondListIcon: 'home',
 
   // Links
   lists: {
     firstList: [
       {
-        name: 'Attack Map',
-        link: '/map/',
+        name: 'Administration Serveur',
+        link: '/cockpit.html',
       },
       {
-        name: 'Cyberchef',
-        link: '/cyberchef/',
-      },
-      {
-        name: 'Elasticvue',
+        name: 'Administration ELK',
         link: '/elasticvue/',
-      },
-      {
-        name: 'Kibana',
-        link: '/kibana/',
-      },
-      {
-        name: 'Spiderfoot',
-        link: '/spiderfoot/',
       },
     ],
     secondList: [
       {
-        name: 'SecurityMeter',
+        name: 'Tableau de bord principal',
         link: 'https://sicherheitstacho.eu',
       },
       {
-        name: 'T-Pot @ GitHub',
-        link: 'https://github.com/telekom-security/tpotce/',
+        name: 'Attaques en temps-réel',
+        link: '/map/',
       },
       {
-        name: 'T-Pot ReadMe',
-        link: 'https://github.com/telekom-security/tpotce/blob/master/README.md',
+        name: 'Tous les Tableaux de bord',
+        link: '/kibana',
       },      
     ],
   },
