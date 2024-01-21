@@ -46,7 +46,7 @@
   --iconsize: 3vh;
 
   /* Dark theme  */
-  --accent: #E20074; /* Hover color */
+  --accent: #0078e2; /* Hover color */
   --bg: #19171a; /* Background color */
   --sbg: #201e21a4; /* Cards color */
   --fg: #d8dee9; /* Foreground color */
@@ -110,7 +110,7 @@ body {
 
 .card:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 10px 10px rgba(226, 0, 116, 0.4);
+  box-shadow: 0 10px 10px rgba(8, 36, 89, 0.4);
 }
 
 .timeBlock {
