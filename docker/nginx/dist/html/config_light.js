@@ -43,7 +43,7 @@ const CONFIG = {
     ],
     secondList: [
       {
-        name: 'Map attaques temps-réel',
+        name: 'Attaques temps-réel',
         link: '/map/',
       },
       {
