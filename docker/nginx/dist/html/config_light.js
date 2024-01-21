@@ -16,7 +16,7 @@ const CONFIG = {
   twelveHourFormat: false,
 
   // Greetings
-  greetingMorning: 'Bonour ☕',
+  greetingMorning: 'Bonjour ☕',
   greetingAfternoon: 'Bon après-midi 🍯',
   greetingEvening: 'Bonne soirée 😁',
   greetingNight: 'Bonne nuit 🥱',
@@ -28,15 +28,12 @@ const CONFIG = {
   //Icons
   firstListIcon: 'home',
   secondListIcon: 'external-link',
-  // Previous version 
-  // firstListIcon: 'gauge',
-  // secondListIcon: 'home',
 
   // Links
   lists: {
     firstList: [
       {
-        name: 'Administration Serveur',
+        name: 'Administration serveur',
         link: '/cockpit.html',
       },
       {
@@ -46,17 +43,13 @@ const CONFIG = {
     ],
     secondList: [
       {
-        name: 'Tableau de bord principal',
-        link: 'https://sicherheitstacho.eu',
-      },
-      {
-        name: 'Attaques en temps-réel',
+        name: 'Map attaques temps-réel',
         link: '/map/',
       },
       {
-        name: 'Tous les Tableaux de bord',
-        link: '/kibana',
-      },      
+        name: 'Tableaux de bords',
+        link: '/kibana/',
+      },
     ],
   },
 };
