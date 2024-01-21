@@ -48,7 +48,7 @@ const CONFIG = {
         link: '/map/',
       },
       {
-        name: 'Tableaux de bords',
+        name: 'Tableaux de bord',
         link: '/kibana/',
       },
     ],
