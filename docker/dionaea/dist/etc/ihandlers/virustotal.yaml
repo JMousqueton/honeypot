@@ -5,5 +5,5 @@
   config:
     # grab it from your virustotal account at My account -> My API Key (https://www.virustotal.com/en/user/<username>/apikey/)
     apikey: "........."
-    file: "@DIONAEA_STATEDIR@/vtcache.sqlite"
-    comment: "This sample was captured in the wild and uploaded by JUlien MOusqueton.\n#honeypot #malware"
+    file: "/opt/dionaea/var/log/vtcache.sqlite"
+    comment: "This sample was captured in the wild and uploaded by Julien Mousqueton.\n#honeypot #malware"
