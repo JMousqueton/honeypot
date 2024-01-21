@@ -52,7 +52,7 @@ const CONFIG = {
       },
       {
         name: 'Tableau InCyber',
-        link: '/kibana/app/dashboards#/view/8d4e8300-ebde-11e8-9675-1b303bfb38ef?_g=h@3a04046',
+        link: '/kibana/app/dashboards#/view/8d4e8300-ebde-11e8-9675-1b303bfb38ef',
       },
     ],
   },
