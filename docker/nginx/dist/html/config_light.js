@@ -26,8 +26,8 @@ const CONFIG = {
   // ┴─┘┴└─┘ ┴ └─┘
 
   //Icons
-  firstListIcon: 'home',
-  secondListIcon: 'external-link',
+  firstListIcon: 'tool',
+  secondListIcon: 'shield',
 
   // Links
   lists: {
@@ -49,6 +49,10 @@ const CONFIG = {
       {
         name: 'Tableaux de bord',
         link: '/kibana/',
+      },
+      {
+        name: 'Tableau InCyber',
+        link: '/kibana/app/dashboards#/view/8d4e8300-ebde-11e8-9675-1b303bfb38ef?_g=h@3a04046',
       },
     ],
   },
