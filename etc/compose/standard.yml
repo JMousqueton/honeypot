@@ -649,14 +649,14 @@ services:
      - /data/nginx/conf/nginxpasswd:/etc/nginx/nginxpasswd:ro
      - /data/nginx/log/:/var/log/nginx/
 
-# Spiderfoot service
-  spiderfoot:
-    container_name: spiderfoot
-    restart: always
-    networks:
-     - spiderfoot_local
-    ports:
-     - "127.0.0.1:64303:8080"
-    image: "dtagdevsec/spiderfoot:2204"
-    volumes:
-     - /data/spiderfoot:/home/spiderfoot/.spiderfoot
+## Spiderfoot service
+#  spiderfoot:
+#    container_name: spiderfoot
+#    restart: always
+#    networks:
+#     - spiderfoot_local
+#    ports:
+#     - "127.0.0.1:64303:8080"
+#    image: "dtagdevsec/spiderfoot:2204"
+#    volumes:
+#     - /data/spiderfoot:/home/spiderfoot/.spiderfoot
