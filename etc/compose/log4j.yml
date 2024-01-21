@@ -174,7 +174,7 @@ services:
     tty: true
     ports:
      - "127.0.0.1:64299:64299"
-    image: "dtagdevsec/map:2204"
+    image: "jmousqueton/map:latest"
 
 ## Map Data Service
   map_data:
@@ -189,7 +189,7 @@ services:
      - /opt/tpot/etc/compose/elk_environment
     stop_signal: SIGKILL
     tty: true
-    image: "dtagdevsec/map:2204"
+    image: "jmousqueton/map:latest"
 #### /ELK
 
 # Ewsposter service
@@ -230,7 +230,7 @@ services:
       #    ports:
       #     - "64297:64297"
       #     - "127.0.0.1:64304:64304"
-    image: "dtagdevsec/nginx:2204"
+    image: "jmousqueton/nginx:latest"
     read_only: true
     volumes:
      - /data/nginx/cert/:/etc/nginx/cert/:ro
