@@ -23,7 +23,7 @@ networks:
   tanner_local:
   ewsposter_local:
   sentrypeer_local:
-  spiderfoot_local:
+#  spiderfoot_local:
 
 services:
 
