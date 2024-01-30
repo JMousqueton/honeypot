@@ -68,22 +68,18 @@ for DOMAIN in "${DOMAINS[@]}"; do
 done
 
 # Stop the T-Pot service
-echo "service tpot stop" 
+service tpot stop
 
 # Obtain SSL certificates for the specified domains
-# eval "certbot certonly --standalone $CERTBOT_DOMAINS"
-echo "certbot certonly --sandalone $CERTBOT_DOMAINS" 
+eval "certbot certonly --standalone $CERTBOT_DOMAINS"
 
 # Since the script supports multiple domains, choose one for the nginx certificate.
 # This example uses the first domain in the list.
-#cp "/etc/letsencrypt/live/${DOMAINS[0]}/fullchain.pem" /data/nginx/cert/nginx.crt
-echo "/etc/letsencrypt/live/${DOMAINS[0]}/fullchain.pem" /data/nginx/cert/nginx.crt
-
-#cp "/etc/letsencrypt/live/${DOMAINS[0]}/privkey.pem" /data/nginx/cert/nginx.key
-echo "/etc/letsencrypt/live/${DOMAINS[0]}/privkey.pem" /data/nginx/cert/nginx.key
+cp "/etc/letsencrypt/live/${DOMAINS[0]}/fullchain.pem" /data/nginx/cert/nginx.crt
+cp "/etc/letsencrypt/live/${DOMAINS[0]}/privkey.pem" /data/nginx/cert/nginx.key
 
 # Start the T-Pot service
-echo "service tpot start" 
+service tpot start
 
 # Wait for services to stabilize
 display_progress 45
