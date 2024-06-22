@@ -1,4 +1,4 @@
-FROM alpine:3.16 as builder
+FROM alpine:3.17 as builder
 #
 RUN apk -U add --no-cache \
             autoconf \
@@ -33,7 +33,7 @@ RUN make install
 #RUN tar cvfz sp.tgz /SentryPeer/* && \
 #    mv sp.tgz /
 #
-FROM alpine:3.16
+FROM alpine:3.17
 #
 #COPY --from=builder /sp.tgz /root
 COPY --from=builder /SentryPeer/sentrypeer /opt/sentrypeer/
