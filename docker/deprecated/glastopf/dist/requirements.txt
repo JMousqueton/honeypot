@@ -15,7 +15,7 @@ greenlet==0.4.13
 hpfeeds==1.0
 idna==2.6
 ipaddress==1.0.22
-Jinja2==2.9.6
+Jinja2==3.1.5
 jmespath==0.9.3
 libtaxii==1.1.111
 lxml==4.2.4
