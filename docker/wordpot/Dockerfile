@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.23.2
 #
 # Include dist
 COPY dist/ /root/dist/
