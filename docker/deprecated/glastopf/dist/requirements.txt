@@ -21,7 +21,7 @@ libtaxii==1.1.111
 lxml==4.2.4
 MarkupSafe==1.0
 MySQL-python==1.2.5
-pyasn1==0.4.2
+pyasn1==0.6.2
 pycparser==2.18
 pylibinjection==0.2.4
 pymongo==3.2.2
