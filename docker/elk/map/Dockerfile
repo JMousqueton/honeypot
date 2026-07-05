@@ -14,7 +14,7 @@ RUN apk --no-cache -U upgrade && \
 # Install from GitHub and setup
     mkdir -p /opt && \
     cd /opt/ && \
-    git clone https://github.com/t3chn0m4g3/t-pot-attack-map -b 3.0.1 && \
+    git clone https://github.com/jmousqueton/t-pot-attack-map && \
     cd t-pot-attack-map && \
     mv DataServer.py DataServer_v2.py && \
     pip3 install --break-system-packages --upgrade pip && \
