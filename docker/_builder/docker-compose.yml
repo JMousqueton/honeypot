@@ -396,7 +396,7 @@ services:
     image: ${TPOT_DOCKER_REPO}/map:${TPOT_VERSION}
     build:
       tags:
-        - ${TPOT_GHCR_REPO}/map:${TPOT_VERSION}
+        - ${JM_REPO}/map:${TPOT_VERSION}
       context: ../elk/map/
       <<: *common-build
 ####
@@ -415,7 +415,7 @@ services:
     image: ${TPOT_DOCKER_REPO}/nginx:${TPOT_VERSION}
     build:
       tags:
-        - ${TPOT_GHCR_REPO}/nginx:${TPOT_VERSION}
+        - ${JM_REPO}/nginx:${TPOT_VERSION}
       context: ../nginx/
       <<: *common-build
 
