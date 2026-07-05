@@ -662,7 +662,7 @@ services:
     tty: true
     ports:
      - "127.0.0.1:64299:64299"
-    image: ${TPOT_REPO}/map:${TPOT_VERSION}
+    image: ${JM_REPO}/map:${TPOT_VERSION}
     pull_policy: ${TPOT_PULL_POLICY}
 
 ## Map Data Service
@@ -680,7 +680,7 @@ services:
      - TZ=${TPOT_ATTACKMAP_TEXT_TIMEZONE}
     stop_signal: SIGKILL
     tty: true
-    image: ${TPOT_REPO}/map:${TPOT_VERSION}
+    image: ${JM_REPO}/map:${TPOT_VERSION}
     pull_policy: ${TPOT_PULL_POLICY}
 #### /ELK
 
