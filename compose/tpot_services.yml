@@ -263,7 +263,7 @@ services:
       tpotinit:
         condition: service_healthy
     environment:
-      - COWRIE_VT_API_KEY=${COWRIE_VT_API_KEY}
+      - COWRIE_OUTPUT_VIRUSTOTAL_API_KEY=${COWRIE_VT_API_KEY}
     tmpfs:
       - /tmp/cowrie:uid=2000,gid=2000
       - /tmp/cowrie/data:uid=2000,gid=2000

@@ -1454,15 +1454,14 @@ format = text
 enabled = false
 debug = false
 
-# VirusTotal API key is injected via the COWRIE_VT_API_KEY environment
-# variable (see .env). Cowrie auto-maps [vt] api_key -> COWRIE_VT_API_KEY,
-# and ExtendedInterpolation feeds it into [output_virustotal].
-[vt]
-api_key =
-
+# VirusTotal upload. api_key is injected at runtime from the container env var
+# COWRIE_OUTPUT_VIRUSTOTAL_API_KEY (cowrie auto-maps [section]_option -> env),
+# which compose sets from COWRIE_VT_API_KEY in .env.
 [output_virustotal]
 enabled = true
-api_key = ${{vt:api_key}}
+api_key =
+collection = cohesity
+commenttext = First seen by SSH/telnet Honeypot from Cohesity
 """
 
 
