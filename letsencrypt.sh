@@ -150,11 +150,23 @@ if [ -z "${LIVE:-}" ] || [ ! -f "${LIVE}/fullchain.pem" ]; then
     exit 1
 fi
 echo "==> Using certificate lineage: ${LIVE}"
-echo "==> Deploying certificate to ${CERT_DIR}/nginx.crt|nginx.key ..."
-cp -L "${LIVE}/fullchain.pem" "${CERT_DIR}/nginx.crt"
-cp -L "${LIVE}/privkey.pem"   "${CERT_DIR}/nginx.key"
-chmod 644 "${CERT_DIR}/nginx.crt"
-chmod 600 "${CERT_DIR}/nginx.key"
+
+# Where does the RUNNING nginx expect its cert? The config is baked into the
+# image and can differ between builds (e.g. nginx.crt vs a per-domain path), so
+# ask the container instead of assuming. Fall back to nginx.crt if nginx is down.
+CRTPATH=$(docker exec "$NGINX_CONTAINER" sh -c "grep -m1 'ssl_certificate ' /etc/nginx/conf.d/tpotweb.conf 2>/dev/null | grep -oE '/etc/nginx/cert/[^; ]+'" 2>/dev/null || true)
+KEYPATH=$(docker exec "$NGINX_CONTAINER" sh -c "grep -m1 'ssl_certificate_key' /etc/nginx/conf.d/tpotweb.conf 2>/dev/null | grep -oE '/etc/nginx/cert/[^; ]+'" 2>/dev/null || true)
+[ -n "$CRTPATH" ] || CRTPATH="/etc/nginx/cert/nginx.crt"
+[ -n "$KEYPATH" ] || KEYPATH="/etc/nginx/cert/nginx.key"
+DEST_CRT="${CERT_DIR}/${CRTPATH#/etc/nginx/cert/}"
+DEST_KEY="${CERT_DIR}/${KEYPATH#/etc/nginx/cert/}"
+
+echo "==> Deploying certificate to ${DEST_CRT} | ${DEST_KEY} ..."
+mkdir -p "$(dirname "$DEST_CRT")" "$(dirname "$DEST_KEY")"
+cp -L "${LIVE}/fullchain.pem" "$DEST_CRT"
+cp -L "${LIVE}/privkey.pem"   "$DEST_KEY"
+chmod 644 "$DEST_CRT"
+chmod 600 "$DEST_KEY"
 
 # --- 4. Reload nginx to pick up the new cert --------------------------------
 echo "==> Reloading nginx ..."
