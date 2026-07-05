@@ -1453,6 +1453,16 @@ format = text
 [output_crashreporter]
 enabled = false
 debug = false
+
+# VirusTotal API key is injected via the COWRIE_VT_API_KEY environment
+# variable (see .env). Cowrie auto-maps [vt] api_key -> COWRIE_VT_API_KEY,
+# and ExtendedInterpolation feeds it into [output_virustotal].
+[vt]
+api_key =
+
+[output_virustotal]
+enabled = true
+api_key = ${{vt:api_key}}
 """
 
 

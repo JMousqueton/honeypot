@@ -262,6 +262,8 @@ services:
     depends_on:
       tpotinit:
         condition: service_healthy
+    environment:
+      - COWRIE_VT_API_KEY=${COWRIE_VT_API_KEY}
     tmpfs:
       - /tmp/cowrie:uid=2000,gid=2000
       - /tmp/cowrie/data:uid=2000,gid=2000
@@ -270,7 +272,7 @@ services:
     ports:
       - "22:22"
       - "23:23"
-    image: ${TPOT_REPO}/cowrie:${TPOT_VERSION}
+    image: ${JM_REPO}/cowrie:${TPOT_VERSION}
     pull_policy: ${TPOT_PULL_POLICY}
     read_only: true
     volumes:
@@ -1102,7 +1104,7 @@ services:
     ports:
      - "64297:64297"
      - "64294:64294"
-    image: ${TPOT_REPO}/nginx:${TPOT_VERSION}
+    image: ${JM_REPO}/nginx:${TPOT_VERSION}
     pull_policy: ${TPOT_PULL_POLICY}
     read_only: true
     volumes:

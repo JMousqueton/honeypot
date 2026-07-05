@@ -524,7 +524,7 @@ services:
     ports:
      - "64297:64297"
      - "64294:64294"
-    image: ${TPOT_REPO}/nginx:${TPOT_VERSION}
+    image: ${JM_REPO}/nginx:${TPOT_VERSION}
     pull_policy: ${TPOT_PULL_POLICY}
     read_only: true
     volumes:
